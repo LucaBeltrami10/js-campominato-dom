@@ -35,16 +35,19 @@ playButton.addEventListener('click', function(){
     for (let i = 0; i < squareNumber; i++){
         let newSquare = createDivSquare(difficultyLevel)
         squareContainer.appendChild(newSquare);
-        newSquare.innerHTML = i + 1
-        newSquare.addEventListener('click', function(){
-            if (randomNumber.includes(i)){
-                newSquare.classList.add('bc-bomb')
-            } else{
+        newSquare.innerHTML = parseInt(i) + 1
+
+        if(randomNumber.includes(i + 1)){
+            newSquare.addEventListener('click', function(){
+                newSquare.classList.toggle('bc-bomb')
+                console.log(i + 1)
+            })
+        }else{
+            newSquare.addEventListener('click', function(){
                 newSquare.classList.toggle('bc-lightblue')
-            }
-            console.log(i + 1)
-        })
-        
+                console.log(i + 1)
+            })
+        }
     }
 });
 
