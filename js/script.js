@@ -42,14 +42,13 @@ const squareContainer = document.getElementById('squares-container');
 console.log(squareContainer)
 const squareClicked = []
 
-
 playButton.addEventListener('click', function(){
     const difficultyLevel =  document.getElementById('difficulty').value
-    console.log(difficultyLevel)
     let squareNumber = difficultyLevel * difficultyLevel
     removeChild(squareContainer)
 
     let randomNumber = []
+
     randomUniqueNumberFromOneToInFor(squareNumber, randomNumber, 10)
     console.log(randomNumber)
 
@@ -81,6 +80,8 @@ playButton.addEventListener('click', function(){
     }
 });
 
+
+
 /* FUNZIONI */
 
 /**
@@ -91,11 +92,10 @@ playButton.addEventListener('click', function(){
 function createDivSquare(nColumn){
     const divSquare = document.createElement('div');
     divSquare.classList.add('my_square');
-    divSquare.style.width = `calc(100% / ${nColumn})`
-    divSquare.style.height = `calc(100% / ${nColumn})`
+    divSquare.style.width = `calc(100% / ${nColumn})`;
+    divSquare.style.height = `calc(100% / ${nColumn})`;
     return divSquare;
 };
-
 
 /* funzione con spunto preso da internet */
 /**
@@ -105,8 +105,8 @@ function createDivSquare(nColumn){
 function removeChild(parent){
     while (parent.firstChild){
         parent.removeChild(parent.firstChild)
-    }
-}
+    };
+};
 
 /**
  * 
@@ -116,13 +116,13 @@ function removeChild(parent){
  */
 function randomUniqueNumberFromOneToInFor(to, listName, multiplicator){
     for ( i=0; i < multiplicator; i++){
-        let randomNumber = Math.floor(Math.random() * to) + 1
+        let randomNumber = Math.floor(Math.random() * to) + 1;
         while (listName.includes(randomNumber)){
-            randomNumber = Math.floor(Math.random() * to) + 1
+            randomNumber = Math.floor(Math.random() * to) + 1;
         }
-        listName.push(randomNumber)
-    }
-}
+        listName.push(randomNumber);
+    };
+};
 
 
 
