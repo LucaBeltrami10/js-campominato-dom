@@ -40,6 +40,20 @@ playButton.addEventListener('click', function(){
 });
 
 
+/**
+ * GENERAZIONE  E APPLICAZIONE BOMBE
+ * 1) Inizializzo array vuoto contenente numeri random
+ * 1) Creo FUNZIONE per GENERARE un numero random e CONTROLLARE che sia diverso dai numeri in un array guori funzione
+ * 2) CICLO per i numeri inseriti nei quadrati
+ *      -> quando un numero è uguale a quello contenuto lista numeri random
+ *          - applico classe specifica css
+ */
+
+
+
+
+
+
 /* FUNZIONI */
 
 /**
