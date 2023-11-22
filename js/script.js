@@ -1,8 +1,3 @@
-/* L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
-Ogni cella ha un numero progressivo, da 1 a 100.
-Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. */
-
 /**
  * 1)seleziono bottone in doom
  * 2)eventlistener su bottone. al click:
@@ -26,7 +21,6 @@ const playButton = document.getElementById('play-button');
 const squareContainer = document.getElementById('squares-container');
 console.log(squareContainer)
 
-/* per bonus. da completare alla fine */
 
 playButton.addEventListener('click', function(){
     const difficultyLevel =  document.getElementById('difficulty').value
@@ -50,8 +44,8 @@ playButton.addEventListener('click', function(){
 
 /**
  * 
- * @param {*} numOfColumn // numero di quadrati su una singola colonna o riga
- * @returns 
+ * @param {*} nColumn // inserisci il numero di quadrati su una singola colonna o riga
+ * @returns //div con classe css e dimensionato in base a nColumn
  */
 function createDivSquare(nColumn){
     const divSquare = document.createElement('div');
@@ -63,6 +57,10 @@ function createDivSquare(nColumn){
 
 
 /* funzione con spunto preso da internet */
+/**
+ * 
+ * @param {*} parent //inserisci il padre degli elementi da eliminare
+ */
 function removeChild(parent){
     while (parent.firstChild){
         parent.removeChild(parent.firstChild)
