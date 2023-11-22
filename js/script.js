@@ -17,7 +17,7 @@
     *          -> console.log
  */
 
-const playButton = document.getElementById('play-button');
+/* const playButton = document.getElementById('play-button');
 const squareContainer = document.getElementById('squares-container');
 console.log(squareContainer)
 
@@ -37,7 +37,7 @@ playButton.addEventListener('click', function(){
             console.log(i + 1)
         })
     }
-});
+}); */
 
 
 /** GENERAZIONE  E APPLICAZIONE BOMBE (DENTRO event listener PLAY button)
@@ -48,6 +48,22 @@ playButton.addEventListener('click', function(){
  *      -> quando un numero è uguale a quello contenuto lista numeri random
  *          - applico classe specifica css
  */
+
+let randomNumber = [1,2,3,4,5]
+console.log(randomNumber)
+
+let number = [2,5]
+
+let equalNumber = []
+
+for (let i=0; i<randomNumber.length - 1; i++){
+ if ( randomNumber[i] == number){
+    equalNumber.push(number)
+ }
+}
+
+console.log(equalNumber)
+
 
 
 
@@ -82,6 +98,6 @@ function removeChild(parent){
 }
 
 
-function randomUniqueNumberIn(listName){
+function randomUniqueNumberFromToIn(from, to, listName){
     
 }
