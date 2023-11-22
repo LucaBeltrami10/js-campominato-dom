@@ -60,7 +60,7 @@ playButton.addEventListener('click', function(){
 
         if(randomNumber.includes(i + 1)){
             newSquare.addEventListener('click', function(){
-                newSquare.classList.toggle('bc-bomb')
+                newSquare.classList.add('bc-bomb')
                 console.log(i + 1)
                 removeChild(squareContainer)
                 console.log(`HAI PERSO! Il tuo punteggio finale è ${squareClicked.length}`)
@@ -70,7 +70,7 @@ playButton.addEventListener('click', function(){
             })
         }else{
             newSquare.addEventListener('click', function(){
-                newSquare.classList.toggle('bc-lightblue')
+                newSquare.classList.add('bc-lightblue')
                 console.log(i + 1)
                 if (!squareClicked.includes(i + 1)){
                     squareClicked.push(i + 1)
