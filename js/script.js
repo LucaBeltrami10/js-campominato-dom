@@ -82,6 +82,7 @@ function removeChild(parent){
     }
 }
 
+let number = []
 
 function randomUniqueNumberFromOneToInFor(to, listName, multiplicator){
     for ( i=0; i < multiplicator; i++){
@@ -92,6 +93,9 @@ function randomUniqueNumberFromOneToInFor(to, listName, multiplicator){
         listName.push(randomNumber)
     }
 }
+
+randomUniqueNumberFromOneToInFor(100,number,10)
+console.log(number)
 
 /* prova per verifica funzionamento funzione
 let number = [1,2,3,4,5,6,7,8,9]
