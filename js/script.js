@@ -20,6 +20,7 @@
 const playButton = document.getElementById('play-button');
 const squareContainer = document.getElementById('squares-container');
 console.log(squareContainer)
+const squareClicked = []
 
 
 playButton.addEventListener('click', function(){
@@ -46,6 +47,7 @@ playButton.addEventListener('click', function(){
             newSquare.addEventListener('click', function(){
                 newSquare.classList.toggle('bc-lightblue')
                 console.log(i + 1)
+                
             })
         }
     }
