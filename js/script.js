@@ -64,6 +64,7 @@ playButton.addEventListener('click', function(){
                 console.log(i + 1)
                 removeChild(squareContainer)
                 console.log(`HAI PERSO! Il tuo punteggio finale è ${squareClicked.length}`)
+                alert(`SEI ESPLOSO! Il tuo punteggio è ${squareClicked.length}`)
             })
         }else{
             newSquare.addEventListener('click', function(){
@@ -77,12 +78,6 @@ playButton.addEventListener('click', function(){
         }
     }
 });
-
-
-
-
-
-
 
 /* FUNZIONI */
 
