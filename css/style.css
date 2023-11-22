@@ -12,6 +12,10 @@
     background-color: lightskyblue;
 }
 
+.bc-bomb{
+    background-color: rgb(249, 7, 7);
+}
+
 .my_container{
     max-width: 800px;
 }
