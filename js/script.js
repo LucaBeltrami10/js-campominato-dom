@@ -17,7 +17,7 @@
     *          -> console.log
  */
 
-const playButton = document.getElementById('play-button');
+/* const playButton = document.getElementById('play-button');
 const squareContainer = document.getElementById('squares-container');
 console.log(squareContainer)
 
@@ -37,7 +37,7 @@ playButton.addEventListener('click', function(){
             console.log(i + 1)
         })
     }
-});
+}); */
 
 
 /** GENERAZIONE  E APPLICAZIONE BOMBE (DENTRO event listener PLAY button)
@@ -48,9 +48,6 @@ playButton.addEventListener('click', function(){
  *      -> quando un numero è uguale a quello contenuto lista numeri random
  *          - applico classe specifica css
  */
-
-let randomListNumber = []
-
 
 
 
@@ -86,17 +83,28 @@ function removeChild(parent){
 }
 
 
-function randomUniqueNumberFromOneToIn(to, listName){
-    let randomNumber = Math.floor(Math.random() * to) + 1
-
-    if()
+function randomUniqueNumberFromOneToInFor(to, listName, multiplicator){
+    for ( i=0; i < multiplicator; i++){
+        let randomNumber = Math.floor(Math.random() * to) + 1
+        while (listName.includes(randomNumber)){
+            randomNumber = Math.floor(Math.random() * to) + 1
+        }
+        listName.push(randomNumber)
+    }
 }
 
+/* prova per verifica funzionamento funzione
+let number = [1,2,3,4,5,6,7,8,9]
+let randomListNumber = 1
+
+let ceononce = number.includes(randomListNumber)
+console.log(ceononce) */
 
 
 
 
-/* prove da dancellare */
+
+/* prove da dancellare
 let number = [1,2,3,4,12]
 let randomNumber = [2,5,6,7,8,1,1,1,4,12]
 console.log(number)
@@ -120,4 +128,4 @@ for (let i=0; i<number.length; i++){
     }
 }
 
-console.log(equalNumber)
+console.log(equalNumber) */
