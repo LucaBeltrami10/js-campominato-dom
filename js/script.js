@@ -40,7 +40,9 @@ playButton.addEventListener('click', function(){
             newSquare.classList.toggle('bc-lightblue')
             console.log(i + 1)
         })
-        
+        if (randomNumber.includes(i)){
+            newSquare.classList.add('bc-bomb')
+        }
     }
 });
 
