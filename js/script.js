@@ -86,8 +86,10 @@ function removeChild(parent){
 }
 
 
-function randomUniqueNumberFromToIn(from, to, listName){
-    
+function randomUniqueNumberFromOneToIn(to, listName){
+    let randomNumber = Math.floor(Math.random() * to) + 1
+
+    if()
 }
 
 
