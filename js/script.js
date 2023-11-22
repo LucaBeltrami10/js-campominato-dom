@@ -62,10 +62,8 @@ playButton.addEventListener('click', function(){
             newSquare.addEventListener('click', function(){
                 newSquare.classList.toggle('bc-bomb')
                 console.log(i + 1)
-                if (!squareClicked.includes(i + 1)){
-                    squareClicked.push(i + 1)
-                }
-                console.log(`il tuo punteggio ora è ${squareClicked.length}`)
+                removeChild(squareContainer)
+                console.log(`HAI PERSO! Il tuo punteggio finale è ${squareClicked.length}`)
             })
         }else{
             newSquare.addEventListener('click', function(){
