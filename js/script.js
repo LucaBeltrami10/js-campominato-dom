@@ -17,7 +17,7 @@
     *          -> console.log
  */
 
-/* const playButton = document.getElementById('play-button');
+const playButton = document.getElementById('play-button');
 const squareContainer = document.getElementById('squares-container');
 console.log(squareContainer)
 
@@ -28,6 +28,10 @@ playButton.addEventListener('click', function(){
     let squareNumber = difficultyLevel * difficultyLevel
     removeChild(squareContainer)
 
+    let randomNumber = []
+    randomUniqueNumberFromOneToInFor(squareNumber, randomNumber, 10)
+    console.log(randomNumber)
+
     for (let i = 0; i < squareNumber; i++){
         let newSquare = createDivSquare(difficultyLevel)
         squareContainer.appendChild(newSquare);
@@ -37,7 +41,7 @@ playButton.addEventListener('click', function(){
             console.log(i + 1)
         })
     }
-}); */
+});
 
 
 /** GENERAZIONE  E APPLICAZIONE BOMBE (DENTRO event listener PLAY button)
@@ -49,7 +53,7 @@ playButton.addEventListener('click', function(){
  *          - applico classe specifica css
  */
 
-let number = []
+
 
 
 
