@@ -1,4 +1,4 @@
-/**
+/** PROCEDIMENTO REPO VECCHIA
  * 1)seleziono bottone in doom
  * 2)eventlistener su bottone. al click:
  *  -> CICLO FOR: 
@@ -15,6 +15,26 @@
     *      -> AGGIUNGO a tutti gli elementi selezionati EventListener. al click:
     *          -> .classlist.toggle(classe css.colore)aggiungo listener su ELEMENTO
     *          -> console.log
+ */
+
+/** GENERAZIONE  E APPLICAZIONE BOMBE (DENTRO event listener PLAY button)
+ * 1) Inizializzo array vuoto contenente numeri random
+ * 2) Creo FUNZIONE per GENERARE un numero random e CONTROLLARE che sia diverso dai numeri in un array guori funzione
+ * ...generazione quadrati...
+ * 3) CICLO per i numeri inseriti nei quadrati
+ *      -> quando un numero è uguale a quello contenuto lista numeri random
+ *          - applico classe specifica css
+ */
+
+/**CALCOLO PUNTEGGIO E FINE GIOCO
+ * 1)DENTRO ALL'EVENT LISTENER DEI QUADRATI 
+ *      aggiungere il valore del quadrato ad una lista  
+ *          SE il valore è già presente -> non aggiungere niente o sovrascrivere
+ * 2)DENTRO ALL'EVENT LISTENER DELLE BOMBE
+ *      aggiungere allert punteggio (array con valori.lenght)
+ *      eliminare contenuto tabella o aggiungere d-none a griglia di gioco
+ *  
+ * 
  */
 
 const playButton = document.getElementById('play-button');
@@ -42,6 +62,10 @@ playButton.addEventListener('click', function(){
             newSquare.addEventListener('click', function(){
                 newSquare.classList.toggle('bc-bomb')
                 console.log(i + 1)
+                if (!squareClicked.includes(i + 1)){
+                    squareClicked.push(i + 1)
+                }
+                console.log(`il tuo punteggio ora è ${squareClicked.length}`)
             })
         }else{
             newSquare.addEventListener('click', function(){
@@ -57,25 +81,6 @@ playButton.addEventListener('click', function(){
 });
 
 
-/** GENERAZIONE  E APPLICAZIONE BOMBE (DENTRO event listener PLAY button)
- * 1) Inizializzo array vuoto contenente numeri random
- * 2) Creo FUNZIONE per GENERARE un numero random e CONTROLLARE che sia diverso dai numeri in un array guori funzione
- * ...generazione quadrati...
- * 3) CICLO per i numeri inseriti nei quadrati
- *      -> quando un numero è uguale a quello contenuto lista numeri random
- *          - applico classe specifica css
- */
-
-/**CALCOLO PUNTEGGIO E FINE GIOCO
- * 1)DENTRO ALL'EVENT LISTENER DEI QUADRATI 
- *      aggiungere il valore del quadrato ad una lista  
- *          SE il valore è già presente -> non aggiungere niente o sovrascrivere
- * 2)DENTRO ALL'EVENT LISTENER DELLE BOMBE
- *      aggiungere allert punteggio (array con valori.lenght)
- *      eliminare contenuto tabella o aggiungere d-none a griglia di gioco
- *  
- * 
- */
 
 
 
