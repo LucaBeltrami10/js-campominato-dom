@@ -51,24 +51,25 @@ playButton.addEventListener('click', function(){
 
 
 /* prove da dancellare */
-let number = [1,2,3,4,5]
-let randomNumber = [2,5]
-console.log(randomNumber)
+let number = [1,2,3,4,12]
+let randomNumber = [2,5,6,7,8,1,1,1,4,12]
+console.log(number)
 
 
 let equalNumber = []
 
-for (let i=0; i<number.length - 1; i++){
-    
+for (let i=0; i<number.length; i++){
+
     let intIndex = 0
 
-    while(intIndex < randomNumber.length - 1){
+    while(intIndex <= randomNumber.length){
 
         if ( number[i] == randomNumber[intIndex]){
-        equalNumber.push(randomNumber[intIndex])
-        console.log(`numero uguale`)
-        }else {
-        intIndex += 1
+            equalNumber.push(randomNumber[intIndex])
+            console.log('numero uguale')
+            intIndex += 1
+        } else{
+            intIndex += 1
         }
     }
 }
