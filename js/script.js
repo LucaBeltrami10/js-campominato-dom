@@ -49,7 +49,7 @@ playButton.addEventListener('click', function(){
  *          - applico classe specifica css
  */
 
-
+let number = []
 
 
 
@@ -82,8 +82,12 @@ function removeChild(parent){
     }
 }
 
-let number = []
-
+/**
+ * 
+ * @param {*} to limite numerico massimo (compreso) tra cui i numeri randomici verranno generati
+ * @param {*} listName nome variabile in cui verrano inseriti i numeri
+ * @param {*} multiplicator numero di valori restitutiti nella lista. NB: mai maggiore di TO (ciclo infinito)
+ */
 function randomUniqueNumberFromOneToInFor(to, listName, multiplicator){
     for ( i=0; i < multiplicator; i++){
         let randomNumber = Math.floor(Math.random() * to) + 1
@@ -94,15 +98,7 @@ function randomUniqueNumberFromOneToInFor(to, listName, multiplicator){
     }
 }
 
-randomUniqueNumberFromOneToInFor(100,number,10)
-console.log(number)
 
-/* prova per verifica funzionamento funzione
-let number = [1,2,3,4,5,6,7,8,9]
-let randomListNumber = 1
-
-let ceononce = number.includes(randomListNumber)
-console.log(ceononce) */
 
 
 
@@ -133,3 +129,12 @@ for (let i=0; i<number.length; i++){
 }
 
 console.log(equalNumber) */
+
+
+
+/* prova per verifica funzionamento funzione
+let number = [1,2,3,4,5,6,7,8,9]
+let randomListNumber = 1
+
+let ceononce = number.includes(randomListNumber)
+console.log(ceononce) */
