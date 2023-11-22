@@ -40,11 +40,11 @@ playButton.addEventListener('click', function(){
 });
 
 
-/**
- * GENERAZIONE  E APPLICAZIONE BOMBE
+/** GENERAZIONE  E APPLICAZIONE BOMBE (DENTRO event listener PLAY button)
  * 1) Inizializzo array vuoto contenente numeri random
- * 1) Creo FUNZIONE per GENERARE un numero random e CONTROLLARE che sia diverso dai numeri in un array guori funzione
- * 2) CICLO per i numeri inseriti nei quadrati
+ * 2) Creo FUNZIONE per GENERARE un numero random e CONTROLLARE che sia diverso dai numeri in un array guori funzione
+ * ...generazione quadrati...
+ * 3) CICLO per i numeri inseriti nei quadrati
  *      -> quando un numero è uguale a quello contenuto lista numeri random
  *          - applico classe specifica css
  */
@@ -79,4 +79,9 @@ function removeChild(parent){
     while (parent.firstChild){
         parent.removeChild(parent.firstChild)
     }
+}
+
+
+function randomUniqueNumberIn(listName){
+    
 }
