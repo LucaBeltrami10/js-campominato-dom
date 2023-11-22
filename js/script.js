@@ -61,7 +61,16 @@ playButton.addEventListener('click', function(){
  *          - applico classe specifica css
  */
 
-
+/**CALCOLO PUNTEGGIO E FINE GIOCO
+ * 1)DENTRO ALL'EVENT LISTENER DEI QUADRATI 
+ *      aggiungere il valore del quadrato ad una lista  
+ *          SE il valore è già presente -> non aggiungere niente o sovrascrivere
+ * 2)DENTRO ALL'EVENT LISTENER DELLE BOMBE
+ *      aggiungere allert punteggio (array con valori.lenght)
+ *      eliminare contenuto tabella o aggiungere d-none a griglia di gioco
+ *  
+ * 
+ */
 
 
 
