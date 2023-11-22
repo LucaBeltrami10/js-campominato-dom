@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-campominato-grid</title>
+    <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- link css custom -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="my_container container-fluid d-flex justify-content-between align-items-center py-4">
+        <h1 class="fs-1">Campo Minato</h1>
+        <div class="d-flex">
+            <select id="difficulty" class="form-select me-4" aria-label="Default select example">
+                <option value="10" selected>Facile</option>
+                <option value="9">Medio</option>
+                <option value="8">Difficile</option>
+              </select>
+            <button id="play-button" type="button" class="btn btn-primary">Play</button>
+        </div>
+    </header>
+    <main class="my_container container-fluid bc-lightgreen py-5">
+        <div id="squares-container" class="d-flex flex-wrap mx-auto">
+        </div>
+    </main>
+    <footer class="my_container container-fluid">
+        <p>Gioco quadrati</p>
+    </footer>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
