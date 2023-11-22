@@ -65,6 +65,8 @@ playButton.addEventListener('click', function(){
                 removeChild(squareContainer)
                 console.log(`HAI PERSO! Il tuo punteggio finale è ${squareClicked.length}`)
                 alert(`SEI ESPLOSO! Il tuo punteggio è ${squareClicked.length}`)
+                squareClicked.splice(0,squareClicked.length)
+                
             })
         }else{
             newSquare.addEventListener('click', function(){
@@ -121,7 +123,6 @@ function randomUniqueNumberFromOneToInFor(to, listName, multiplicator){
         listName.push(randomNumber)
     }
 }
-
 
 
 
