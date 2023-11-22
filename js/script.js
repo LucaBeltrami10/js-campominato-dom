@@ -37,12 +37,14 @@ playButton.addEventListener('click', function(){
         squareContainer.appendChild(newSquare);
         newSquare.innerHTML = i + 1
         newSquare.addEventListener('click', function(){
-            newSquare.classList.toggle('bc-lightblue')
+            if (randomNumber.includes(i)){
+                newSquare.classList.add('bc-bomb')
+            } else{
+                newSquare.classList.toggle('bc-lightblue')
+            }
             console.log(i + 1)
         })
-        if (randomNumber.includes(i)){
-            newSquare.classList.add('bc-bomb')
-        }
+        
     }
 });
 
